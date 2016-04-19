@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Restful Node</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="container" ng-controller="TweetController">
+	
+	<header>
+		<h1>@kyleconkright</h1>
+		<h4>Hosted by Dean Cain</h4>
+	</header>
+
+	<div id="profile-info">
+		<div class="profile-pic"></div>
+	</div>
+
+	<ul id="feed">
+		<li ng-repeat="tweet in tweets">
+			<tweet-card></tweet-card>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
