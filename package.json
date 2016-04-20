@@ -1,12 +1,13 @@
 {
   "name": "twitter-feed",
   "main": "server.js",
-  "start":"node server.js",
+  "start": "node server.js",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-ruby-sass": "^2.0.6"
   },
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "twitter": "^1.2.5"
   }
 }
