@@ -7,7 +7,7 @@ app.controller('TweetController', ['$scope', '$http', function($scope, $http){
 		console.log(response[0].user);
 		$scope.user = response[0].user.screen_name;
 		$scope.bio = response[0].user.description;
-		$scope.img_url = response[0].user.profile_image_url_https;
+		$scope.img_url = 'https://twitter.com/'+$scope.user+'/profile_image?size=original';
 		$scope.tweets = response;
 	})
 

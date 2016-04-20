@@ -36,14 +36,14 @@ header {
   margin: 0 0 4%;
   animation: drop1 1s;
   text-align: center; }
-  #profile-info .profile-pic {
+  #profile-info .profile-pic img {
     width: 120px;
     margin: 0 auto 1%;
     background-color: #645D75;
     background-size: cover;
     background-position: center;
     border-radius: 1px; }
-    #profile-info .profile-pic:after {
+    #profile-info .profile-pic img:after {
       content: '';
       display: block;
       padding-top: 100%; }
