@@ -11,12 +11,12 @@
 <div class="container" ng-controller="TweetController">
 	
 	<header>
-		<h1>@kyleconkright</h1>
-		<h4>Hosted by Dean Cain</h4>
+		<h1>@{{user}}</h1>
+		<h4>{{bio}}</h4>
 	</header>
 
 	<div id="profile-info">
-		<div class="profile-pic"></div>
+		<div class="profile-pic"><img ng-src="{{img_url}}"></div>
 	</div>
 
 	<ul id="feed">
