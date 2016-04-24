@@ -14,7 +14,7 @@ var twitter = new Twit({
 });
 
 app.get('/tweets', function(req, res){
-	var params = {screen_name: 'kyleconkright', exclude_replies: true, count: 25};
+	var params = {screen_name: 'tmz', exclude_replies: true, count: 25};
 	twitter.get('statuses/user_timeline', params, function(error, tweets, response){
 	  if (!error) {
 	    res.json(tweets);

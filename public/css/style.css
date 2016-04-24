@@ -51,16 +51,12 @@ header {
 #feed {
   width: 50%;
   margin: 0 auto; }
-  #feed li {
+  #feed li.tweet {
     margin: 2%;
     padding: 1% 2% 3%;
     border-bottom: 1px solid #f6f6f6;
     animation: slideDown .5s; }
-    #feed li p.handle {
-      color: #bbb;
-      font-size: .9em;
-      margin: 0 0 2px; }
-    #feed li ~ .border-bottom {
+    #feed li.tweet ~ .border-bottom {
       height: 2px;
       background: red; }
   @media (max-width: 769px) {
