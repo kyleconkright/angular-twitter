@@ -76,10 +76,11 @@ header {
 		padding: 1% 2% 3%;
 		border-bottom: 1px solid #f6f6f6;
 		animation: slideDown .5s;
-
-		& ~ .border-bottom {
-			height: 2px;
-			background: red;
+		span {
+			font-size: .8em;
+			color: #aaa;
+			display: block;
+			margin: 1% 0;
 		}
 	}
 

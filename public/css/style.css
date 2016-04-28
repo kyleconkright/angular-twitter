@@ -56,9 +56,11 @@ header {
     padding: 1% 2% 3%;
     border-bottom: 1px solid #f6f6f6;
     animation: slideDown .5s; }
-    #feed li.tweet ~ .border-bottom {
-      height: 2px;
-      background: red; }
+    #feed li.tweet span {
+      font-size: .8em;
+      color: #aaa;
+      display: block;
+      margin: 1% 0; }
   @media (max-width: 769px) {
     #feed {
       width: 70%; } }
