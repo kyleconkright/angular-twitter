@@ -17,20 +17,27 @@ header {
   background: linear-gradient(#8c6ba5, #6c89c3);
   color: white;
   height: 40vh;
-  margin: 0 0 -60px;
+  margin: 0;
   font-size: 1.5em;
   animation: drop1 .5s; }
   @media (max-width: 769px) {
     header {
       height: 20vh;
       font-size: 1em;
-      display: block;
       text-align: center;
       padding: 8% 2%; } }
   header h1 {
     font-weight: 300; }
   header h1, header h4 {
     animation: drop2 .5s; }
+  header h4 {
+    width: 50%;
+    font-size: .8em;
+    text-align: center;
+    margin: 0 auto; }
+    @media (max-width: 769px) {
+      header h4 {
+        width: 90%; } }
 
 #profile-info {
   margin: 0 0 4%;
@@ -42,7 +49,8 @@ header {
     background-color: #645D75;
     background-size: cover;
     background-position: center;
-    border-radius: 1px; }
+    border-radius: 1px;
+    display: none; }
     #profile-info .profile-pic img:after {
       content: '';
       display: block;

@@ -24,13 +24,13 @@ header {
 	background: linear-gradient(#8c6ba5, #6c89c3);
 	color: white;
 	height: 40vh;
-	margin: 0 0 (-$profilePicSize/2);
+	margin: 0;
 	font-size: 1.5em;
 	animation: drop1 .5s;
 	@include tablet {
 		height: 20vh;
 		font-size: 1em;
-		display: block;
+		// display: block;
 		text-align: center;
 		padding: 8% 2%;
 	}
@@ -39,6 +39,15 @@ header {
 	}
 	h1, h4 {
 		animation: drop2 .5s;
+	}
+	h4 {
+		width: 50%;
+		font-size: .8em;
+		text-align: center;
+		margin: 0 auto;
+		@include tablet {
+			width: 90%;
+		}
 	}
 }
 
@@ -53,6 +62,7 @@ header {
 		background-size: cover;
 		background-position: center;
 		border-radius: 1px;
+		display: none;
 		&:after {
 			content: '';
 			display: block;
