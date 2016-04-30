@@ -1,0 +1,17 @@
+<div class="container" ng-controller="TweetController">
+	
+	<header>
+		<h1>@{{user}}</h1>
+		<h4>{{bio}}</h4>
+	</header>
+
+	<div id="profile-info">
+		<div class="profile-pic"><img ng-src="{{img_url}}"></div>
+	</div>
+
+	<ul id="feed">
+		<li class="tweet" ng-repeat="tweet in tweets">
+			<tweet-card></tweet-card>
+		</li>
+	</ul>
+</div>

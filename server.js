@@ -13,14 +13,17 @@ var twitter = new Twit({
 	access_token_secret: 'bxKB932YNsqaA9Ji96WxG17BFWqhnHZL56K1EUjE0OHoD'
 });
 
-app.get('/tweets', function(req, res){
-	var params = {screen_name: 'kyleconkright', exclude_replies: true, count: 25};
+
+
+app.get('/tweets/:user', function(req, res){
+	var params = {screen_name: req.params.user, exclude_replies: true, count: 25};
 	twitter.get('statuses/user_timeline', params, function(error, tweets, response){
 	  if (!error) {
+	  	console.log(req.params)
 	    res.json(tweets);
 	  }
 	});
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
 app.listen(port);

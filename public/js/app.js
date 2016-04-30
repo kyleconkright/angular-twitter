@@ -1,8 +1,9 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngRoute']);
 
-app.controller('TweetController', ['$scope', '$http', function($scope, $http){
+app.controller('TweetController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
 
-	$http.get('/tweets').success(function(response){
+	$http.get('/tweets/' + $routeParams.user).success(function(response){
+		console.log($routeParams);
 		$scope.user = response[0].user.screen_name;
 		$scope.bio = response[0].user.description;
 		$scope.img_url = 'https://twitter.com/'+$scope.user+'/profile_image?size=original';
@@ -22,3 +23,12 @@ app.controller('TweetController', ['$scope', '$http', function($scope, $http){
 		templateUrl: '/templates/directives/tweet-card.html'
 	};
 });
+
+angular.module('app')
+	.config(['$routeProvider', function($routeProvider){
+
+		$routeProvider.when('/:user', {
+			templateUrl: 'templates/pages/home/index.html'
+		})
+		.otherwise({redirectTo: '/kyleconkright'});
+}]);
